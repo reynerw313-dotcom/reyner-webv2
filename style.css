@@ -1,0 +1,198 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #090d16;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Animasi Fade In */
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar Kustom */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #172554;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Gradien bersinar halus */
+.radial-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 60%);
+}
+
+/* ============================================================
+   LIGHT MODE OVERRIDES
+   Applied when html does NOT have .dark class
+   ============================================================ */
+html:not(.dark) {
+  --lm-bg:          #f1f5f9;
+  --lm-bg-card:     #ffffff;
+  --lm-bg-nav:      rgba(248, 250, 252, 0.95);
+  --lm-border:      rgba(148, 163, 184, 0.4);
+  --lm-text-base:   #1e293b;
+  --lm-text-muted:  #64748b;
+  --lm-text-strong: #0f172a;
+}
+
+html:not(.dark) body {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+}
+
+html:not(.dark) ::-webkit-scrollbar-track { background: #e2e8f0; }
+html:not(.dark) ::-webkit-scrollbar-thumb { background: #94a3b8; }
+html:not(.dark) .radial-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.08) 0%, transparent 60%);
+}
+
+/* Header / Navbar */
+html:not(.dark) header {
+  background-color: rgba(248, 250, 252, 0.95) !important;
+  border-bottom-color: rgba(148, 163, 184, 0.4) !important;
+}
+
+html:not(.dark) .nav-link,
+html:not(.dark) .mobile-nav-link {
+  color: #475569 !important;
+}
+html:not(.dark) .nav-link:hover,
+html:not(.dark) .mobile-nav-link:hover {
+  color: #1e293b !important;
+  background-color: rgba(148, 163, 184, 0.2) !important;
+}
+html:not(.dark) .nav-link.text-blue-400,
+html:not(.dark) .mobile-nav-link.text-blue-400 {
+  color: #2563eb !important;
+  background-color: rgba(37, 99, 235, 0.08) !important;
+  border-color: rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Mobile menu drawer */
+html:not(.dark) #mobile-menu {
+  background-color: rgba(248, 250, 252, 0.98) !important;
+  border-color: rgba(148, 163, 184, 0.3) !important;
+}
+
+/* Generic text overrides */
+html:not(.dark) .text-white    { color: #0f172a !important; }
+html:not(.dark) .text-slate-200,
+html:not(.dark) .text-slate-300 { color: #334155 !important; }
+html:not(.dark) .text-slate-400 { color: #64748b !important; }
+html:not(.dark) .text-slate-500 { color: #94a3b8 !important; }
+
+/* Cards & Containers */
+html:not(.dark) .bg-navy-900\/40,
+html:not(.dark) [class*="bg-navy-9"],
+html:not(.dark) [class*="bg-slate-9"] {
+  background-color: rgba(255,255,255,0.9) !important;
+}
+html:not(.dark) .bg-slate-800\/50,
+html:not(.dark) [class*="bg-slate-8"] {
+  background-color: rgba(241,245,249,0.8) !important;
+}
+html:not(.dark) [class*="bg-slate-700"] {
+  background-color: rgba(226,232,240,0.8) !important;
+}
+
+html:not(.dark) [class*="border-slate-8"],
+html:not(.dark) [class*="border-blue-9"] {
+  border-color: rgba(148, 163, 184, 0.35) !important;
+}
+html:not(.dark) [class*="border-slate-7"] {
+  border-color: rgba(148, 163, 184, 0.25) !important;
+}
+
+/* Music Player */
+html:not(.dark) #spotify-player-bar {
+  background-color: rgba(255,255,255,0.97) !important;
+  border-color: rgba(148,163,184,0.4) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12) !important;
+}
+html:not(.dark) #spotify-player-bar .text-white,
+html:not(.dark) #spotify-player-bar #player-title { color: #0f172a !important; }
+html:not(.dark) #spotify-player-bar #player-artist { color: #64748b !important; }
+html:not(.dark) #spotify-player-bar .btn-spotify   { color: #475569 !important; }
+html:not(.dark) #spotify-player-bar .btn-spotify:hover { color: #1e293b !important; }
+html:not(.dark) #spotify-player-bar .spotify-slider {
+  background: rgba(0,0,0,0.15) !important;
+}
+html:not(.dark) #spotify-player-bar .spotify-slider.filled {
+  background: linear-gradient(to right, #1DB954 var(--fill-percent, 0%), rgba(0,0,0,0.15) var(--fill-percent, 0%)) !important;
+}
+
+/* Playlist Drawer */
+html:not(.dark) #spotify-playlist-drawer {
+  background-color: rgba(248,250,252,0.98) !important;
+  border-color: rgba(148,163,184,0.3) !important;
+}
+
+/* Modals */
+html:not(.dark) [id*="modal"] {
+  background-color: rgba(0,0,0,0.45) !important;
+}
+html:not(.dark) [id*="modal"] > div,
+html:not(.dark) [id*="modal"] .rounded-2xl {
+  background-color: #ffffff !important;
+  border-color: rgba(148,163,184,0.3) !important;
+}
+html:not(.dark) [id*="modal"] .text-white,
+html:not(.dark) [id*="modal"] .text-slate-200 { color: #1e293b !important; }
+html:not(.dark) [id*="modal"] .text-slate-400  { color: #64748b !important; }
+
+/* Input fields */
+html:not(.dark) input[type="text"],
+html:not(.dark) input[type="password"],
+html:not(.dark) input[type="range"],
+html:not(.dark) textarea {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+  border-color: rgba(148,163,184,0.5) !important;
+}
+html:not(.dark) input[type="text"]:focus,
+html:not(.dark) input[type="password"]:focus,
+html:not(.dark) input[type="range"]:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.2) !important;
+}
+
+/* Glow backgrounds at top/bottom */
+html:not(.dark) .radial-glow {
+  opacity: 0.4;
+}
+
+/* Tab bars & backgrounds used in stats/playlist pages */
+html:not(.dark) [class*="bg-slate-900"] {
+  background-color: rgba(255,255,255,0.85) !important;
+}
+html:not(.dark) [class*="bg-slate-800"] {
+  background-color: rgba(241,245,249,0.9) !important;
+}
